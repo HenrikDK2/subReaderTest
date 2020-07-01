@@ -1,4 +1,3 @@
-import "preact/debug";
 import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import Pages from "./Pages";
