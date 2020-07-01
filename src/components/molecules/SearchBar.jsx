@@ -29,6 +29,9 @@ const SearchBar = ({}) => {
     <input
       css={inputStyle}
       type="text"
+      onKeyDown={(e) => {
+        if (e.keyCode === 13) e.currentTarget.blur();
+      }}
       placeholder="Søgefelt"
       onChange={(e) => {
         const filter = mapData.cinemas.filter((cinema) => {
