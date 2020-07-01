@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { css, jsx } from "@emotion/core";
 import { InfoWindow } from "@react-google-maps/api";
 import { mapContext } from "../../context/map.context";

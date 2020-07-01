@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import React, { useRef, useEffect } from "react";
-import { css, jsx } from "@emotion/core";
+import React from "react";
 import MapViewer from "../organism/MapViewer";
 const Index = () => {
   return (
