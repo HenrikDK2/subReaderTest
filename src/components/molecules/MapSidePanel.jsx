@@ -14,6 +14,19 @@ const MapSidePanel = ({}) => {
     overflow: scroll;
     padding: 0 2px;
     overflow-x: hidden;
+    scrollbar-width: thin;
+
+    & li:nth-of-type(2n) {
+      background: #fff;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #cdcdcd;
+    }
   `;
 
   return (
