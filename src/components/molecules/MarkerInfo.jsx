@@ -48,12 +48,12 @@ const MarkerInfo = ({ data }) => {
             <p>{data.address}</p>
           </div>
         )}
-        {data.phone && (
+        {data.phone && data.phone.length > 8 ? (
           <div>
             <FontAwesomeIcon icon={"phone"} />
             <a href={`tel:${data.phone}`}>{data.phone}</a>
           </div>
-        )}
+        ) : null}
       </div>
     </InfoWindow>
   );
