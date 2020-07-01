@@ -23,7 +23,6 @@ const App = () => {
         phone
       }
     }
-    
     `,
     variables: {},
   });

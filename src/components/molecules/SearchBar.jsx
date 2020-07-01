@@ -7,7 +7,7 @@ const SearchBar = ({}) => {
   const inputStyle = css`
     transition: background 0.5s;
     position: absolute;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
     left: 50%;
     top: 20px;
     transform: translate(-50%);

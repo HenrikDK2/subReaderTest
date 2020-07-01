@@ -9,8 +9,7 @@ const MapViewer = ({}) => {
     height: 600px;
     width: 100%;
 
-    @media (max-width: 500px) {
-      display: flex;
+    @media only screen and (max-width: 500px) {
       flex-direction: column;
       height: calc(100vh - 75px);
       & ul {
