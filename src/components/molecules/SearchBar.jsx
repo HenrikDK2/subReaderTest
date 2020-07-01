@@ -34,7 +34,7 @@ const SearchBar = ({}) => {
         const filter = mapData.cinemas.filter((cinema) => {
           if (cinema.name.toLowerCase().includes(e.target.value.toLowerCase())) return cinema;
         });
-        setMapData({ ...mapData, filteredCinemas: filter });
+        setMapData({ ...mapData, filteredCinemas: filter, showInfo: false });
       }}
     />
   );
