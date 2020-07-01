@@ -1,0 +1,54 @@
+{
+  "name": "subreadetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=production --nomaps",
+    "deploy": "npm run prod && netlify deploy",
+    "prod": "npm run build && npm run build:lambda",
+    "start:lambda": "netlify-lambda serve functions",
+    "build:lambda": "netlify-lambda build functions",
+    "rm": "del-cli -f dist && del-cli -f node_modules && del-cli -f package-lock.json && del-cli -f lambda"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenrikDK2/subReadeTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenrikDK2/subReadeTest/issues"
+  },
+  "homepage": "https://github.com/HenrikDK2/subReadeTest#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.10.1",
+    "@react-google-maps/api": "^1.9.7",
+    "babel-plugin-optimize-react": "0.0.4",
+    "dotenv": "^8.2.0",
+    "preact": "^10.4.4",
+    "preact-compat": "^3.19.0",
+    "uniqid": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@emotion/core": "^10.0.28",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-emotion": "^10.0.33",
+    "copy-webpack-plugin": "^6.0.1",
+    "css-loader": "^3.5.3",
+    "del-cli": "^3.0.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
+    "react-hook-form": "^5.7.2",
+    "terser-webpack-plugin": "^3.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
