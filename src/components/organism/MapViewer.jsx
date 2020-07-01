@@ -11,7 +11,7 @@ const MapViewer = ({}) => {
 
     @media only screen and (max-width: 500px) {
       flex-direction: column;
-      height: calc(100vh - 75px);
+      height: calc(100vh - 77px);
       & ul {
         width: 100%;
         height: 35%;
