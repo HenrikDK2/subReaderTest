@@ -28,7 +28,7 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      const data = await fetch(process.env.API_URL, {
+      const data = await fetch("https://api.subreader.dk/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: cinemaQuery,

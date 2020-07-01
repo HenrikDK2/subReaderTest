@@ -1,6 +1,7 @@
-[build]
-command = "npm run prod"
-environment = { GOOGLE_MAP_KEY="AIzaSyAsYrMiXDJ9XCuAQozpkYTduWm52UVpg90", API_URL="http://api.subreader.dk/" }
+[context.production]
+command = "npm run build"
+publish = "dist"
+
 [dev]
 publish = "dist"
 

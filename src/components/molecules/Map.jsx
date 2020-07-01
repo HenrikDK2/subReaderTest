@@ -9,7 +9,7 @@ import MarkerInfo from "../molecules/MarkerInfo";
 const Map = ({}) => {
   const [mapData, setMapData] = useContext(mapContext);
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.GOOGLE_MAP_KEY,
+    googleMapsApiKey: "AIzaSyAsYrMiXDJ9XCuAQozpkYTduWm52UVpg90",
   });
 
   if (loadError) return "Error loading maps";
