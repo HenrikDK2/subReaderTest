@@ -12,10 +12,10 @@ const MapViewer = ({}) => {
     @media (max-width: 500px) {
       display: flex;
       flex-direction: column;
-      height: 700px;
+      height: calc(100vh - 80px);
       & ul {
         width: 100%;
-        height: 40%;
+        height: 35%;
         & li {
           text-align: center;
         }
