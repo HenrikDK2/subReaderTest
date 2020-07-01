@@ -6,6 +6,7 @@ import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { mapContext } from "../../context/map.context";
 import MarkerInfo from "../molecules/MarkerInfo";
 import SearchBar from "../molecules/SearchBar";
+import subreaderMarker from "../../images/subreaderMarker.png";
 
 const Map = ({}) => {
   const [mapData, setMapData] = useContext(mapContext);
@@ -34,6 +35,7 @@ const Map = ({}) => {
 
           {mapData.filteredCinemas.map((cinema) => (
             <Marker
+              icon={subreaderMarker}
               key={uniqid("cinema")}
               onClick={(e) => {
                 setMapData({ ...mapData, currentCinema: cinema, showInfo: true });
