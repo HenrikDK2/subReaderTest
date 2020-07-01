@@ -12,13 +12,11 @@ const App = () => {
   const cinemaQuery = JSON.stringify({
     query: `{
       cinemas {
-        id
         name
         location {
           latitude
           longitude
         }
-        logo
         address
         phone
       }
