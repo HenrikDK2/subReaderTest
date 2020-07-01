@@ -3,6 +3,9 @@ import { render } from "react-dom";
 import Pages from "./Pages";
 import { mapContext } from "./context/map.context";
 import Global from "./Global";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPhone, faAddressBook } from "@fortawesome/free-solid-svg-icons";
+library.add(faPhone, faAddressBook);
 
 const App = () => {
   const cinemasHook = useState(null);

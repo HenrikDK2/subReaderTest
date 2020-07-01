@@ -21,6 +21,9 @@
   "homepage": "https://github.com/HenrikDK2/subReadeTest#readme",
   "dependencies": {
     "@babel/runtime": "^7.10.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@react-google-maps/api": "^1.9.7",
     "babel-plugin-optimize-react": "0.0.4",
     "preact": "^10.4.4",

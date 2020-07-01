@@ -13,6 +13,7 @@ const MapSidePanel = ({}) => {
     background: #f7f7f7;
     overflow: scroll;
     padding: 0 2px;
+    overflow-x: hidden;
   `;
 
   return (

@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { css, jsx } from "@emotion/core";
 import { InfoWindow } from "@react-google-maps/api";
 import { mapContext } from "../../context/map.context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MarkerInfo = ({ data }) => {
   const [mapData, setMapData] = useContext(mapContext);
@@ -14,6 +15,14 @@ const MarkerInfo = ({ data }) => {
     `}
     & > h2 {
       margin: 5px 0;
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+      & > svg {
+        margin: 0 5px 0 0;
+      }
     }
 
     @media (max-width: 500px) {
@@ -33,8 +42,18 @@ const MarkerInfo = ({ data }) => {
     >
       <div css={infoBox}>
         {data.name && <h2>{data.name}</h2>}
-        {data.address && <p>{data.address}</p>}
-        {data.phone && <a href={`tel:${data.phone}`}>{data.phone}</a>}
+        {data.address && (
+          <div>
+            <FontAwesomeIcon icon={"address-book"} />
+            <p>{data.address}</p>
+          </div>
+        )}
+        {data.phone && (
+          <div>
+            <FontAwesomeIcon icon={"phone"} />
+            <a href={`tel:${data.phone}`}>{data.phone}</a>
+          </div>
+        )}
       </div>
     </InfoWindow>
   );
