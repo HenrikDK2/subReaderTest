@@ -12,7 +12,7 @@ const MapViewer = ({}) => {
     @media (max-width: 500px) {
       display: flex;
       flex-direction: column;
-      height: calc(100vh - 80px);
+      height: calc(100vh - 75px);
       & ul {
         width: 100%;
         height: 35%;
@@ -22,6 +22,7 @@ const MapViewer = ({}) => {
       }
     }
   `;
+
   return (
     <div css={mapViewerStyle}>
       <Map />

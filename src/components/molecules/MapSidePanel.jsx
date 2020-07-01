@@ -19,7 +19,7 @@ const MapSidePanel = ({}) => {
   return (
     <List className={sidebarStyle}>
       {mapData &&
-        mapData.cinemas.map((cinema) => (
+        mapData.filteredCinemas.map((cinema) => (
           <ListItem
             onClick={(e) => {
               setMapData({ ...mapData, currentCinema: cinema, showInfo: true });

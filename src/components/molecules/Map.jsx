@@ -5,6 +5,7 @@ import { css, jsx } from "@emotion/core";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { mapContext } from "../../context/map.context";
 import MarkerInfo from "../molecules/MarkerInfo";
+import SearchBar from "../molecules/SearchBar";
 
 const Map = ({}) => {
   const [mapData, setMapData] = useContext(mapContext);
@@ -31,7 +32,7 @@ const Map = ({}) => {
         >
           {mapData.showInfo && <MarkerInfo data={mapData.currentCinema} />}
 
-          {mapData.cinemas.map((cinema) => (
+          {mapData.filteredCinemas.map((cinema) => (
             <Marker
               key={uniqid("cinema")}
               onClick={(e) => {
@@ -40,6 +41,7 @@ const Map = ({}) => {
               position={{ lat: cinema.location.latitude, lng: cinema.location.longitude }}
             />
           ))}
+          <SearchBar />
         </GoogleMap>
       )}
     </div>

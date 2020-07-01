@@ -35,7 +35,11 @@ const App = () => {
         headers: { "Content-Type": "application/json" },
         body: cinemaQuery,
       }).then((res) => res.json());
-      cinemasHook[1]({ cinemas: data.data.cinemas, showInfo: false });
+      cinemasHook[1]({
+        cinemas: data.data.cinemas,
+        showInfo: false,
+        filteredCinemas: data.data.cinemas,
+      });
     })();
   }, []);
 
