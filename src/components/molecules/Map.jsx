@@ -7,6 +7,7 @@ import { mapContext } from "../../context/map.context";
 import MarkerInfo from "../molecules/MarkerInfo";
 import SearchBar from "../molecules/SearchBar";
 import subreaderMarker from "../../images/subreaderMarker.png";
+import Loader from "../atoms/Loader";
 
 const Map = ({}) => {
   const [mapData, setMapData] = useContext(mapContext);
@@ -15,7 +16,7 @@ const Map = ({}) => {
   });
 
   if (loadError) return "Error loading maps";
-  if (!isLoaded) return "Loading Maps";
+  if (!isLoaded) return <Loader />;
 
   return (
     <div
