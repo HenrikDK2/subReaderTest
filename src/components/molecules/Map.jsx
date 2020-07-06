@@ -12,7 +12,7 @@ import Loader from "../atoms/Loader";
 const Map = ({}) => {
   const [mapData, setMapData] = useContext(mapContext);
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyAsYrMiXDJ9XCuAQozpkYTduWm52UVpg90",
+    googleMapsApiKey: process.env.APIKEY,
   });
 
   if (loadError) return "Error loading maps";

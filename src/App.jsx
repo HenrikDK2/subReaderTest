@@ -22,12 +22,11 @@ const App = () => {
       }
     }
     `,
-    variables: {},
   });
 
   useEffect(() => {
     (async () => {
-      const data = await fetch("https://api.subreader.dk/", {
+      const data = await fetch(process.env.DB, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: cinemaQuery,
