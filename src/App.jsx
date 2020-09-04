@@ -24,8 +24,6 @@ const App = () => {
     `,
   });
 
-  console.log("test");
-
   useEffect(() => {
     (async () => {
       const data = await fetch("https://api.subreader.dk/", {
