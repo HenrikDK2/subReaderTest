@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -84,6 +85,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "./src/images/static/**", to: "", flatten: true }],
+    }),
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, "src/index.html"),
       filename: "index.html",

@@ -12,7 +12,7 @@ import Loader from "../atoms/Loader";
 const Map = () => {
   const [mapData, setMapData] = useContext(mapContext);
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.APIKEY,
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_KEY,
   });
 
   if (loadError) return "Error loading maps";

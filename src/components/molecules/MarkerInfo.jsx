@@ -7,10 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const infoBox = css`
   display: none;
-  ${mapData.showInfo &&
-  css`
-    display: block;
-  `}
+
   & > h2 {
     margin: 5px 0;
   }
@@ -29,6 +26,12 @@ const infoBox = css`
 `;
 const MarkerInfo = ({ data }) => {
   const [mapData, setMapData] = useContext(mapContext);
+  const infoBoxCondition = css`
+    ${mapData.showInfo &&
+    css`
+      display: block;
+    `}
+  `;
 
   return (
     <InfoWindow
@@ -40,7 +43,7 @@ const MarkerInfo = ({ data }) => {
         lng: data.location.longitude,
       }}
     >
-      <div css={infoBox}>
+      <div css={[infoBox, infoBoxCondition]}>
         {data.name && <h2>{data.name}</h2>}
         {data.address && (
           <div>
