@@ -1,33 +1,33 @@
 /** @jsx jsx */
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { css, jsx } from "@emotion/core";
 import List from "../atoms/UnorderedList";
 import ListItem from "../atoms/MapListItem";
 import { mapContext } from "../../context/map.context";
 
-const MapSidePanel = ({}) => {
+const sidebarStyle = css`
+  width: 300px;
+  height: 100%;
+  background: #f7f7f7;
+  overflow: scroll;
+  padding: 0 2px;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+
+  & li:nth-of-type(2n) {
+    background: #fff;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cdcdcd;
+  }
+`;
+const MapSidePanel = () => {
   const [mapData, setMapData] = useContext(mapContext);
-  const sidebarStyle = css`
-    width: 300px;
-    height: 100%;
-    background: #f7f7f7;
-    overflow: scroll;
-    padding: 0 2px;
-    overflow-x: hidden;
-    scrollbar-width: thin;
-
-    & li:nth-of-type(2n) {
-      background: #fff;
-    }
-
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #cdcdcd;
-    }
-  `;
 
   return (
     <List className={sidebarStyle}>

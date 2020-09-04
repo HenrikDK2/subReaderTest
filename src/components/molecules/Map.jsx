@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useContext } from "react";
+import { useContext } from "react";
 import uniqid from "uniqid";
 import { css, jsx } from "@emotion/core";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
@@ -9,7 +9,7 @@ import SearchBar from "../molecules/SearchBar";
 import subreaderMarker from "../../images/subreaderMarker.png";
 import Loader from "../atoms/Loader";
 
-const Map = ({}) => {
+const Map = () => {
   const [mapData, setMapData] = useContext(mapContext);
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.APIKEY,

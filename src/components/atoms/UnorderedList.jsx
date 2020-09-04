@@ -1,16 +1,14 @@
 /** @jsx jsx */
-import React from "react";
 import { css, jsx } from "@emotion/core";
 
+const ListStyle = css`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`;
 const UnorderedList = ({ children, className, forwardRef }) => {
-  const ListStyle = css`
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    ${className}
-  `;
   return (
-    <ul ref={forwardRef} css={ListStyle}>
+    <ul ref={forwardRef} css={[ListStyle, className]}>
       {children}
     </ul>
   );

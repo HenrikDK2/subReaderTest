@@ -1,38 +1,38 @@
 /** @jsx jsx */
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { css, jsx } from "@emotion/core";
 import { InfoWindow } from "@react-google-maps/api";
 import { mapContext } from "../../context/map.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const infoBox = css`
+  display: none;
+  ${mapData.showInfo &&
+  css`
+    display: block;
+  `}
+  & > h2 {
+    margin: 5px 0;
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+    & > svg {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 0 12px 12px 0;
+  }
+`;
 const MarkerInfo = ({ data }) => {
   const [mapData, setMapData] = useContext(mapContext);
-  const infoBox = css`
-    display: none;
-    ${mapData.showInfo &&
-    css`
-      display: block;
-    `}
-    & > h2 {
-      margin: 5px 0;
-    }
-
-    & div {
-      display: flex;
-      align-items: center;
-      & > svg {
-        margin: 0 5px 0 0;
-      }
-    }
-
-    @media (max-width: 500px) {
-      padding: 0 12px 12px 0;
-    }
-  `;
 
   return (
     <InfoWindow
-      onCloseClick={(e) => {
+      onCloseClick={() => {
         setMapData({ ...mapData, showInfo: false });
       }}
       position={{

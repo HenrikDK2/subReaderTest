@@ -30,7 +30,7 @@ const loaderStyle = css`
   }
 `;
 
-const Loader = ({}) => {
+const Loader = () => {
   return <div css={loaderStyle}></div>;
 };
 

@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react";
 import { css, jsx, Global as GlobalElm } from "@emotion/core";
 
 const Global = ({}) => {
